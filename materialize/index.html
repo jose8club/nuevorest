@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rest Materialize: José Luis Acuña</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="components/materialize/css/materialize.min.css">
+		<link rel="stylesheet" type="text/css" href="components/materialize/css/materialize.css">
+		<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	</head>
+	<body>
+
+		<!-- El encabezado del sistema segun materialize-->
+	  	<nav>
+	    	<div class="nav-wrapper">
+	     		<a href="#" class="brand-logo">Uso de Rest con JQuery y Materialize</a>
+	      		<ul id="nav-mobile" class="right hide-on-med-and-down">
+		        	<li><a href="#" onclick="crear_modal()">Crear Nuevo Usuario</a></li>
+		        	<li><a href="#" onclick="ver_autor()">Configuración</a></li>
+	        	<!--<li><a href="collapsible.html">JavaScript</a></li> -->
+	      		</ul>
+	    	</div>
+	  	</nav>
+
+	  	 <!-- Modal Structure de PUT y DELETE -->
+		  <div id="modal1" class="modal">
+		    <div class="modal-content">
+		      <h4>Edición de Usuario</h4>
+		      <p><label id="ids" for="modal1"></label></p><br>
+		      <p><input id="nombre" type="text" name="pnombre" placeholder="Nuevo Primer Nombre"></input></p>
+		      <p><input id="apellido" type="text" name="snombre" placeholder="Nuevo Segundo Nombre"></input></p>
+		      <p><input id="imagen" type="text" name="img" placeholder="Nuevo Link de Imagen"></input></p>
+		      <p><input id="comentario" type="text" name="comm" placeholder="Nuevo Comentario"></input></p>
+		    </div>
+		    <div class="modal-footer">
+		      <a href="#" onclick="modificar()" class="modal-action modal-close waves-effect waves-green btn-flat">Modificar</a>
+		      <a href="#" onclick="eliminado()" class="modal-action modal-close waves-effect waves-green btn-flat">Eliminar</a>
+		    </div>
+		  </div>
+
+		  <!-- Modal Structure de POST -->
+		  <div id="modal2" class="modal">
+		    <div class="modal-content">
+		      <h4>Creación de Usuario</h4>
+		      
+		      <p><input id="nombrenuevo" type="text" name="npnombre" placeholder="Ingresar Primer Nombre"></input></p>
+		      <p><input id="apellidonuevo" type="text" name="nsnombre" placeholder="Ingresar Segundo Nombre"></input></p>
+		      <p><input id="imagennueva" type="text" name="nimg" placeholder="Ingresar Link de Imagen"></input></p>
+		      <p><input id="comentarionuevo" type="text" name="ncomm" placeholder="Ingresar Comentario"></input></p>
+		    </div>
+		    <div class="modal-footer">
+		      <a href="#" onclick="crear()" class="modal-action modal-close waves-effect waves-green btn-flat">Crear Usuario</a>
+		      
+		    </div>
+		  </div>
+
+      	<!-- Esto es para que sea cargado todo los elementos del body-->
+	  	<script type="application/javascript" src="js/jquery-3.1.1.min.js"></script>
+	  	<script type="application/javascript" src="components/materialize/js/materialize.js"></script>
+		<script type="application/javascript" src="components/materialize/js/materialize.min.js"></script>
+		<script type="application/javascript" src="js/app.js"></script>
+        
+	</body>
+</html>

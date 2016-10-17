@@ -1,0 +1,33 @@
+.brand-logo{
+	font-family: monotype corsiva;
+	font-weight: bold;
+}
+.modal-content{
+	font-family: arial;	
+}
+.modal-footer{
+	font-family: arial;
+	font-weight: bold;
+}
+.card{
+	font-family: monotype corsiva;
+	font-weight: bold;
+}
+#modal1{
+	border: double;
+}
+#modal2{
+	border: double;
+}
+#btnn{
+	font-family: arial;
+	font-weight: normal;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	text-align: center;
+	vertical-align:top;
+}
+img{
+	width:304px; 
+	height:236px;
+}
