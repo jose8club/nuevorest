@@ -1,0 +1,67 @@
+h1{
+	color:white;
+	font-family: times;
+	font-weight: bold;
+}
+.modal{
+	border:double;
+}
+.modal-title{
+	font-family: times;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 25px;
+}
+.modal-body{
+	font-family: times;
+	font-weight: bold;
+	font-size: 20px;
+}
+.card{
+	font-family: times;
+	font-weight: bold;
+}
+img{
+	width:370px; 
+	height:236px;
+}
+.card-title{
+	font-weight: bold;
+	font-size: 20px;
+}
+a{
+	font-family: times;
+}
+.form-group{
+	font-family: times;
+}
+.card{
+	border: double;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	padding: 10px;
+}
+.modal .modal-header{
+	background-color: #FAFAFA;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	padding: 10px;
+}
+.card .modal-footer{
+	background-color: #FAFAFA;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	padding: 10px;
+}
+#buttonEx{
+	font-family: times;
+}
+.modal .modal-footer{
+	background-color: #FAFAFA;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	padding: 10px;
+}
+.modal .modal-body{
+	height: 200px;
+}

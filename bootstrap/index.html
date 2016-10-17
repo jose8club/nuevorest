@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rest Bootstrap: José Luis Acuña</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="components/bootstrap-3.3.7-dist/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="components/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="components/bootstrap-3.3.7-dist/css/bootstrap-theme.css">
+		<link rel="stylesheet" type="text/css" href="components/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	</head>
+	<body>
+
+		<nav class="navbar navbar-inverse">
+			<h1>&nbspUso de Bootstrap con Rest</h1>
+			<div class="container-fluid">
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+			      <ul class="nav navbar-nav navbar-right">
+			        <li class="dropdown">
+			          <a href="#" onclick="desplegar()" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Opciones <span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <li><a href="#" onclick="crear_modal()">Crear Usuario</a></li>
+			          </ul>
+			        </li>
+			        <li><a href="#" onClick="ver_autor()">Ver Configuración</a></li>
+			      </ul>
+			    </div>
+			  </div>
+		</nav>
+
+		<!-- Modal de creación-->
+		<div class="modal fade" id="Modal01" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		        <h4 class="modal-title" id="myModalLabel">Creación de Usuario</h4>
+		      </div>
+		      <div class="modal-body">
+		      	  <div class="form-group">
+				      <label class="control-label col-sm-4" for="email">Primer Nombre:</label>
+				      <div class="col-sm-8">
+				        <p>
+				        	<input id="nombrenuevo" class="form-control" type="text" name="npnombre" placeholder="Ingresar Primer Nombre"></input>
+				        </p>
+				      </div>
+			      </div>
+		      	  <div class="form-group">
+				      <label class="control-label col-sm-4" for="email">Segundo Nombre:</label>
+				      <div class="col-sm-8">
+				        <p>
+				        	<input id="apellidonuevo" class="form-control" type="text" name="nsnombre" placeholder="Ingresar Segundo Nombre"></input>
+				        </p>
+				      </div>
+			      </div>	
+		      	  <div class="form-group">
+				      <label class="control-label col-sm-4" for="email">Link de Imagen:</label>
+				      <div class="col-sm-8">
+				        <p>
+				        	<input id="imagennueva" class="form-control" type="text" name="nimg" placeholder="Ingresar Link de Imagen"></input>
+				        </p>
+				      </div>
+			      </div>
+		      	  <div class="form-group">
+				      <label class="control-label col-sm-4" for="email">Comentario:</label>
+				      <div class="col-sm-8">
+				        <p>
+				        	<input id="comentarionuevo" class="form-control" type="text" name="ncomm" placeholder="Ingresar Comentario"></input>
+				        </p>
+				      </div>
+			      </div>						   
+		      </div>
+		      <div class="modal-footer">
+		      	<button type="button" class="btn btn-primary" onclick="crear()">Crear Usuario</button>
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<!-- Modal de edicion-->
+		<div class="modal fade" id="Modal02" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		        <h4 class="modal-title" id="myModalLabel">Edición de Usuario</h4>
+		      </div>
+		      <div class="modal-body">
+		      	  <!--<p><label id="ids" for="modal1"></label></p>-->
+		      	  <div class="form-group">
+				      <label class="control-label col-sm-4" for="email">Primer Nombre:</label>
+				      <div class="col-sm-8">
+				        <p><input id="nombre" class="form-control" type="text" name="pnombre" placeholder="Nuevo Primer Nombre"></input></p>
+				      </div>
+			      </div>
+		      	  <div class="form-group">
+				      <label class="control-label col-sm-4" for="email">Segundo Nombre:</label>
+				      <div class="col-sm-8">
+				        <p><input id="apellido" class="form-control" type="text" name="snombre" placeholder="Nuevo Segundo Nombre"></input></p>
+				      </div>
+			      </div>	
+		      	  <div class="form-group">
+				      <label class="control-label col-sm-4" for="email">Link de Imagen:</label>
+				      <div class="col-sm-8">
+				        <p><input id="imagen" class="form-control" type="text" name="img" placeholder="Nuevo Link de Imagen"></input></p>
+				      </div>
+			      </div>
+		      	  <div class="form-group">
+				      <label class="control-label col-sm-4" for="email">Comentario:</label>
+				      <div class="col-sm-8">
+				        <p><input id="comentario" class="form-control" type="text" name="comm" placeholder="Nuevo Comentario"></input></p>
+				      </div>
+			      </div>						      
+		      </div>
+		      <div class="modal-footer">
+		      	<button type="button" class="btn btn-primary" onclick="modificar()">Modificar</button>
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+      	<!-- Esto es para que sea cargado todo los elementos del body-->
+	  	<script type="application/javascript" src="js/jquery-3.1.1.min.js"></script>
+	  	<script type="application/javascript" src="components/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+		<script type="application/javascript" src="components/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+		<script type="application/javascript" src="components/bootstrap-3.3.7-dist/js/npm.js"></script>
+		<script type="application/javascript" src="js/app.js"></script>
+        
+	</body>
+</html>
